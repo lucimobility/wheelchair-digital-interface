@@ -87,6 +87,10 @@ coming soon... /docs/usb/wdi-usb-interface.md
 ### Bluetooth
 coming soon... /docs/ble/wdi-ble-interface.md
 
+### Specifically Supported Devices
+These are non-generic devices that the WDI is specifically designed to work with:
+* Xbox controller (including Xbox Adaptive Controller)
+
 ## License
 The WDI is open for use under an Apache 2.0 License.
 

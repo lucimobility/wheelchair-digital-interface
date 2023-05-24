@@ -1,4 +1,4 @@
-# Wheelchair Digital Interface (WDI)
+# Wheelchair Digital Interface
 The Wheelchair Digital Interface (WDI) API detailed in this project is a modern, two-way communication standard for power wheelchairs built on widely accepted HID prototocols.
 
 ## Purpose
@@ -12,10 +12,10 @@ The WDI was initially conceived and developed as part of the National Science Fo
 
 ## Stakeholders
 These stakeholders do not cover every use case, but they cover the major use cases that the WDI seeks to address.
-### 1. User with Rapidly Degenerative Condition
-* Users are often reliant on clinicians/care team to inform, acquire, and setup equipment. Options are hard to find because specialized field (very limited off-the-shelf options), often have to go through insurance, and are unique to setup on the power wheelchair.
-* Physical abilities change rapidly, so best drive method also changes rapidly.
-* Cannot get new drive methods quickly enough to keep up with changing condition, so often times users skip to end use case (eye drive). This leads to situations where the **drive method is not chosen based on the users current ability**
+### 1. User with Progressive Condition
+* Users are often reliant on clinicians/care team to inform, acquire, and setup equipment. Holistic options are hard to find because of the specialized needs (very limited off-the-shelf options), challenging insurance reimbursement, and solutions are unique to set up on a power wheelchair. Users without reimbursement challenges still need customizable options with a setup process they or a care team member can accomplish.
+* Physical capabilities change rapidly, and therefore, so does the functional drive method.
+* Users cannot get new drive methods quickly enough to keep up with changing conditions, so often times users skip to the end use case (eye drive). This leads to situations where the drive method is not chosen based on the user's current ability The reimbursement model is challenging and time-consuming in such a way that by the time a funded solution arrives and is setup, the user's condition may have progressed and that is no longer an applicable solution.
 
 ### 2. Tech savvy user
 * Uses computer, smartphone, plays video games, tinkers with technology
@@ -51,30 +51,35 @@ These stakeholders do not cover every use case, but they cover the major use cas
 | Action | Notes |
 | -------------|---------|
 | Power/sleep toggle* | Distinct but functionally equivalent |
-| Move forward | Proportional or Digital |
-| Move backward | Proportional or Digital |
-| Turn Left | Proportional or Digital |
-| Turn Right | Proportional or Digital |
-| Adjust Maximum speed* | Up/down |
-| Change Profile* | Includes switching to attendant control |
-| Switch Mode* | Mainly between drive/seating control |
-| Seating controls | matches movement controls, left/right select actuator, up/down moves actuator |
+| Move forward | Proportional or digital |
+| Move backward | Proportional or digital |
+| Turn left | Proportional or digital |
+| Turn right | Proportional or digital |
+| Adjust maximum speed* | Up/down |
+| Change profile* | Includes switching to attendant control |
+| Switch mode* | Mainly between drive/seating control |
+| Emergency stop | Typically used with latch drive mode |
+| Seating controls | Matches movement controls, left/right select actuator, up/down moves actuator |
 | Open user menu | Usually a digital switch, can be input sequence |
-| Navigate user menu | matches movement controls |
+| Navigate user menu | Matches movement controls |
 | Headlight toggle* | |
 | Hazard lights toggle* | |
-| Left/Right blinker toggles* | |
+| Left/right blinker toggles* | |
 | Horn | |
 
-Possible LUCI actions:
+Current possible LUCI actions:
 * Override
 * Silence sounds
 * Launch setup tool
 * Capture and upload troubleshooting data
+* Ramp assist user engaged
+
 
 
 Future Actions:
-* ???
+* LUCI latch?
+* Toggle ramp assist? Toggle autonomous ramp assist mode?
+* ??
 
 
 ## WDI Overview
@@ -88,8 +93,9 @@ coming soon... /docs/usb/wdi-usb-interface.md
 coming soon... /docs/ble/wdi-ble-interface.md
 
 ### Specifically Supported Devices
-These are non-generic devices that the WDI is specifically designed to work with:
+These are non-generic devices (require a driver) that the WDI is specifically designed to work with:
 * Xbox controller (including Xbox Adaptive Controller)
+* TODO: Show xbox mapping
 
 ## License
 The WDI is open for use under an Apache 2.0 License.

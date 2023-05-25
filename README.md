@@ -37,12 +37,19 @@ These stakeholders do not cover every use case, but they cover the major use cas
 * Wants to be able to rapidly iterate/prototype devices.
 * Wants data to come back from the chair to do ???
 
+
 ## Requirements
 * WDI shall allow for devices to control all aspects of a power wheelchair that the user can currently control.
 * WDI shall interface with off-the-shelf control devices. (Separate into what types of specific devices?)
-* WDI shall allow for bi-directional communication.
+* WDI shall allow for bi-directional communication with the input device for use with feedback such as haptics, lights, or sounds.
 * WDI shall allow for devices to self-report their capabilities and bounds (e.g. joystick ranges)
-* 
+* WDI shall allow for multiple devices to be used simultaneously.
+* WDI shall require a specific input before allowing a device to control the wheelchair.
+* WDI shall stop the chair and return control to the native wheelchair control device upon losing connection to an input.
+
+## Limiting factors
+* WDI requires LUCI to be installed on the powerchair for now, so it is only compatible with powerchair models that LUCI is compatible with.
+* WDI needs the wheelchair electronics/control system, so a native drive input is required even if it is unused for driving.
 
 
 ## What is controlled on a wheelchair

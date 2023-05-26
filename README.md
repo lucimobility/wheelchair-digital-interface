@@ -46,9 +46,11 @@ These stakeholders do not cover every use case, but they cover the major use cas
 * WDI shall allow for multiple devices to be used simultaneously.
 * WDI shall require a specific input before allowing a device to control the wheelchair.
 * WDI shall stop the chair and return control to the native wheelchair control device upon losing connection to an input.
+* WDI shall allow configuring ???????? maybe need a stakeholder need for this?
 
 ## Limiting factors
 * WDI requires LUCI to be installed on the powerchair for now, so it is only compatible with powerchair models that LUCI is compatible with.
+* LUCI currently turns off when the wheelchair does, so there will be no way to turn a chair on via the WDI for now.
 * WDI needs the wheelchair electronics/control system, so a native drive input is required even if it is unused for driving.
 
 

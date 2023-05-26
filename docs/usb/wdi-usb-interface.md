@@ -4,12 +4,56 @@ The WDI relies on the existing [USB HID Specifications](https://www.usb.org/hid)
 
 The most important aspect of controlling a power wheelchair is driving. This is accomplished either through the use of a proportional/analog device like a joystick or a digital device such as a switch array. In the WDI, these are controlled by either defining the device as a Gamepad/Joystick for proportional control, or as a keyboard for digital control.
 
+## Random thoughts
 In general, want this to make off-the-shelf generic HIDs usable.
 
 Recommend Gamepad + Joystick usages for buttons if using proportional (allow d-pad for digital too?)\
 ^ Joystick usage recommended if wanting the device to integrate with XAC?? \
+
+Maybe only provide gamepad details, any joystick HIDs should be used through the XAC
+
 Touchpad or other digitizer for other proportional? Multitouch actions? Maybe a future feature...
 
 Recommend keyboard for digital drive.
 
-Where do relative devices like mice fit in?
+Where do relative devices like mice fit in? Probably not used for now
+
+
+## Gamepad usage button mapping explanation
+When the HID is defined as a gamepad, the button usages get mapped to particular events by the linux kernel. A gamepad HID with the following usage would be able to trigger all of the subsequent button press events.
+
+```
+0x05, 0x09,        //   Usage Page (Button)
+0x19, 0x01,        //   Usage Minimum (0x01)
+0x29, 0x0f,        //   Usage Maximum (0x0f)
+```
+
+https://gitlab.freedesktop.org/libevdev/libevdev/-/blob/master/include/linux/linux/input-event-codes.h#L380
+```
+ BTN_GAMEPAD / 	BTN_SOUTH / BTN_A
+ BTN_EAST / BTN_B
+ BTN_C
+ BTN_NORTH / BTN_X
+ BTN_WEST / BTN_Y
+ BTN_Z
+ BTN_TL
+ BTN_TR
+ BTN_TL2
+ BTN_TR2
+ BTN_SELECT
+ BTN_START
+ BTN_MODE
+ BTN_THUMBL
+ BTN_THUMBR
+```
+
+## Drive actions
+| Action | Keyboard Controls | Gamepad Controls |
+|--------|------|-----|
+| Drive forward | 'w' \| up arrow | Y axis (towards min val) |
+| Drive backward | 's' \| down arrow | Y axis (towards max val) |
+| Drive left | 'a' \| left arrow | X axis (towards min val) |
+| Drive right | 'd' \| right arrow | X axis (towards max val) |
+| Emergency stop | backspace | button_east?? would like this to be something that is easy to press under stress |
+| Enable drive | enter | start button |
+| 

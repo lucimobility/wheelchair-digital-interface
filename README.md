@@ -46,7 +46,6 @@ These stakeholders do not cover every use case, but they cover the major use cas
 * WDI shall allow for multiple complimentary devices to be used simultaneously.
 * WDI shall require a specific input before allowing a device to control the wheelchair.
 * WDI shall stop the chair and return control to the native wheelchair control device upon losing connection to an input.
-* WDI shall allow configuring ???????? maybe need a stakeholder need for this?
 
 
 ## What is controlled on a wheelchair
@@ -83,7 +82,7 @@ The WDI builds upon existing specifications for using [Human Interface Devices (
 
 
 ### USB
-coming soon... /docs/usb/wdi-usb-interface.md
+Work in progress started [here](/docs/usb/wdi-usb-interface.md)
 
 ### Bluetooth
 coming soon... /docs/ble/wdi-ble-interface.md

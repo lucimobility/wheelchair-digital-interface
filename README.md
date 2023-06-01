@@ -12,12 +12,12 @@ The WDI was initially conceived and developed as part of the National Science Fo
 
 ## Stakeholders
 These stakeholders do not cover every use case, but they cover the major use cases that the WDI seeks to address.
-### 1. User with Progressive Condition
+### 1. Users with Progressive or Changing Conditions
 * Users are often reliant on clinicians/care team to inform, acquire, and setup equipment. Holistic options are hard to find because of the specialized needs (very limited off-the-shelf options), challenging insurance reimbursement, and solutions are unique to set up on a power wheelchair. Users without reimbursement challenges still need customizable options with a setup process they or a care team member can accomplish.
 * Physical capabilities change rapidly, and therefore, so does the functional drive method.
 * Users cannot get new drive methods quickly enough to keep up with changing conditions, so often times users skip to the end use case (eye drive). This leads to situations where the drive method is not chosen based on the user's current ability The reimbursement model is challenging and time-consuming in such a way that by the time a funded solution arrives and is setup, the user's condition may have progressed and that is no longer an applicable solution.
 
-### 2. Tech savvy user
+### 2. Tech Savvy User
 * Uses computer, smartphone, plays video games, tinkers with technology
 * Very comfortable with current drive method.
 * Wants to tinker with using other things to drive the chair, like phone or game controller, so they can get the best setup for themselves
@@ -35,7 +35,7 @@ These stakeholders do not cover every use case, but they cover the major use cas
 
 ### 5. Researcher
 * Wants to be able to rapidly iterate/prototype devices.
-* Wants data to come back from the chair to do ???
+* Wants data to come back from the chair for feedback to the user (e.g. lights, sounds, haptics)
 
 
 ## Requirements
@@ -43,15 +43,10 @@ These stakeholders do not cover every use case, but they cover the major use cas
 * WDI shall interface with off-the-shelf control devices. (Separate into what types of specific devices?)
 * WDI shall allow for bi-directional communication with the input device for use with feedback such as haptics, lights, or sounds.
 * WDI shall allow for devices to self-report their capabilities and bounds (e.g. joystick ranges)
-* WDI shall allow for multiple devices to be used simultaneously.
+* WDI shall allow for multiple complimentary devices to be used simultaneously.
 * WDI shall require a specific input before allowing a device to control the wheelchair.
 * WDI shall stop the chair and return control to the native wheelchair control device upon losing connection to an input.
 * WDI shall allow configuring ???????? maybe need a stakeholder need for this?
-
-## Limiting factors
-* WDI requires LUCI to be installed on the powerchair for now, so it is only compatible with powerchair models that LUCI is compatible with.
-* LUCI currently turns off when the wheelchair does, so there will be no way to turn a chair on via the WDI for now.
-* WDI needs the wheelchair electronics/control system, so a native drive input is required even if it is unused for driving.
 
 
 ## What is controlled on a wheelchair
@@ -76,20 +71,12 @@ These stakeholders do not cover every use case, but they cover the major use cas
 | Left/right blinker toggles* | |
 | Horn | |
 
-Current possible LUCI actions:
-* Override
+Future Needs:
+* Override a system behavior
 * Silence sounds
 * Launch setup tool
-* Capture and upload troubleshooting data
-* Ramp assist user engaged
-
-
-
-Future Actions:
-* LUCI latch?
-* Toggle ramp assist? Toggle autonomous ramp assist mode?
-* ??
-
+* Engage/disengage one or more automated features
+* Enable/disable airplane mode/communications
 
 ## WDI Overview
 The WDI builds upon existing specifications for using [Human Interface Devices (HID)](https://en.wikipedia.org/wiki/Human_interface_device).
@@ -101,10 +88,18 @@ coming soon... /docs/usb/wdi-usb-interface.md
 ### Bluetooth
 coming soon... /docs/ble/wdi-ble-interface.md
 
-### Specifically Supported Devices
-These are non-generic devices (require a driver) that the WDI is specifically designed to work with:
-* Xbox controller (including Xbox Adaptive Controller)
-* TODO: Show xbox mapping
+### Other Physical Interfaces
+HID is also supported on the following interfaces:
+* I2C
+* CAN
+
+### Suggested Other Devices
+These are non-generic devices (may require a driver or may work differently with a driver) that the WDI is specifically designed to work with:
+
+| Controller | Notes |
+|------|-----|
+| Xbox | Requires driver (xpad) |
+| Playstation 5 (DualSense) | Can work generically, but has right stick axes and buttons mapped differently with driver. Motion and touchpad capabilities require driver |
 
 ## License
 The WDI is open for use under an Apache 2.0 License.

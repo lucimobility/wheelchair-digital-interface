@@ -72,7 +72,7 @@ These stakeholders do not cover every use case, but they cover the major use cas
 | Headlight toggle* | |
 | Hazard lights toggle* | |
 | Left/right blinker toggles* | |
-| Horn | |
+| Horn* | |
 
 Future Needs:
 * Override a system behavior

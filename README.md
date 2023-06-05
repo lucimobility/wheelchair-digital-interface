@@ -100,6 +100,9 @@ These are non-generic devices (may require a driver or may work differently with
 | Xbox | Requires driver (xpad) |
 | Playstation 5 (DualSense) | Can work generically, but has right stick axes and buttons mapped differently with driver. Motion and touchpad capabilities require driver |
 
+## Implementations
+Known implementations of the WDI and any specific information about those implementations can be found [here](docs/implementations/)
+
 ## License
 The WDI is open for use under an Apache 2.0 License.
 
@@ -115,4 +118,4 @@ The companies and organizations listed support the open, inclusive future provid
 | -------------|---------|
 | Argallab at Northwestern University | Founding Member |
 | Team Gleason | Founding Member |
-| LUCI | Founding Member, LUCI units with LuciCore X.X and newer software are compatible with USB and BLE WDI controllers. | 
+| [LUCI](https://www.luci.com) | Founding Member, LUCI units with LuciCore 2.0 and newer software are compatible with USB WDI controllers. |

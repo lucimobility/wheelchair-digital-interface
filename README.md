@@ -10,6 +10,10 @@ The purpose of the open WDI standard is:
 ## Background
 The WDI was initially conceived and developed as part of the National Science Foundation (NSF) Convergence Accelerator Track H project "Mobility Independence through Accelerated Wheelchair Intelligence" (NSF SP0076554) with input from a wide range of stakeholders. 
 
+WDI is intended to fill a gap in current power wheelchair standards. RESNA WC-2 and ISO 7176 do not define or provide guidance on power wheelchair interfaces for third party input devices, and previous attempts to provide a standard for power wheelchair interfaces and accessories (such as the M3S standard) have failed due to lack of industry adoption.
+
+Prior to the WDI, the state-of-the-art in power wheelchair controls was to communicate with the wheelchair through a proprietary third-party interface module using a 9-pin D-Sub (DB9) connector. This interface was commonly referred to as "TRACE", was an input only/one-way interface, and was defined slightly differently by each wheelchair electronics manufacturer. See manufacturer technical documents for more details. TRACE is not a published or maintained industry standard.
+
 ## Stakeholders
 These stakeholders do not cover every use case, but they cover the major use cases that the WDI seeks to address.
 ### 1. Users with Progressive or Changing Conditions

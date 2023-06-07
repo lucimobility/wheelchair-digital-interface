@@ -9,8 +9,13 @@ The WDI relies on the existing [USB HID Specifications](https://www.usb.org/hid)
 
  Button presses and releases are separate events, and the WDI acts upon a button press for non-driving actions. This means that the duration of the press does not matter. Any driving done through a digital button press will stop when the button is released. Multiple buttons can be pressed simultaneously.
 
+ ### Active Control
+ Only one device is allowed to control movement on the chair at a time. A device takes or gives up control by sending a specific button press (listed as "Enable device control" below). A device that is not in control may still affect other aspects of the chair such as modifying speed setting, profile, and controlling the lights.
 
-## Note on Gamepad Usage Button Mapping
+
+## Button Mapping
+This section defines what input events lead to what output on the chair.
+### Note on Gamepad Usage Button Mapping
 When the HID is defined as a gamepad, the button usages get mapped to particular events by the linux kernel. A gamepad HID with the following usage would be able to trigger all of the subsequent button press events.
 
 ```
@@ -38,9 +43,31 @@ https://gitlab.freedesktop.org/libevdev/libevdev/-/blob/master/include/linux/lin
  BTN_THUMBR
 ```
 
-If the usage extends past the typical 15 gamepad buttons, then the buttons start getting mapped to `BTN_TRIGGER_HAPPYX`
+If the usage extends past the typical 15 gamepad buttons, then the buttons start getting mapped to `BTN_TRIGGER_HAPPYX`.These typically are not present on off-the-shelf gamepad devices.
 
-## Drive Actions
+### Implementation-dependant Buttons
+Since what needs to be controlled varies depending on the WDI [implementation](../implementations/), the following standard buttons and axes are reserved to be specific to the implementation:
+
+**Gamepad:**
+* BTN_EAST
+* BTN_C
+* BTN_WEST
+* BTN_NORTH
+* BTN_Z
+* BTN_TR2
+* BTN_TL2
+* BTN_MODE
+* BTN_THUMBL
+* BTN_THUMBR
+* ABS_Z
+* ABS_RX
+* ABS_RY
+* ABS_RZ
+
+**Keyboard** - any key not listed below can be used
+
+
+### Drive Actions
 | Action | Keyboard Controls | Gamepad Controls |
 |--------|------|-----|
 | Drive forward | 'w' \| up arrow | Y axis (towards min val) |
@@ -49,10 +76,10 @@ If the usage extends past the typical 15 gamepad buttons, then the buttons start
 | Drive right | 'd' \| right arrow | X axis (towards max val) |
 | Emergency stop | backspace | BTN_SOUTH |
 | Enable device control | enter | BTN_START |
-| Override | caps lock | BTN_EAST |
 
 
-## Chair Control Actions
+
+### Chair Control Actions
 User menu control matches drive controls.
 | Action | Keyboard Controls | Gamepad Controls |
 |--------|------|-----|

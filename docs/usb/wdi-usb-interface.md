@@ -53,7 +53,7 @@ If the usage extends past the typical 15 gamepad buttons, then the buttons start
 
 
 ## Chair Control Actions
-Seating controls and user menu control match drive controls.
+User menu control matches drive controls.
 | Action | Keyboard Controls | Gamepad Controls |
 |--------|------|-----|
 | Power/Sleep toggle | escape | BTN_SELECT to wake up (slept through user menu) |
@@ -67,3 +67,24 @@ Seating controls and user menu control match drive controls.
 | Right blinker | 'n' | user menu only |
 | Horn | spacebar (while pressed) | BTN_THUMBR (while pressed) |
 
+### Seating
+Seating can be controlled using the drive controls when in seating adjust mode. Alternatively, the following actions are mapped to specific inputs. For now, the gamepad mapping uses buttons outside the range of typical usage, but a mapping such that off-the-shelf gamepads are usable will be created too.
+
+| Action | Keyboard Controls | Gamepad Controls |
+|--------|------|-----|
+| Memory seating 1 forward | SHIFT + 1 | BTN_TRIGGER_HAPPY1 |
+| Memory seating 1 backward | CTRL + 1 | BTN_TRIGGER_HAPPY2 |
+| Memory seating 2 forward | SHIFT + 2 | BTN_TRIGGER_HAPPY3 |
+| Memory seating 2 backward | CTRL + 2 | BTN_TRIGGER_HAPPY4 |
+| Memory seating 3 forward | SHIFT + 3 | BTN_TRIGGER_HAPPY5 |
+| Memory seating 3 backward | CTRL + 3 | BTN_TRIGGER_HAPPY6 |
+| Tilt forward | SHIFT + numpad 0 | BTN_TRIGGER_HAPP7 |
+| Tilt backward | CTRL + numpad 0 | BTN_TRIGGER_HAPPY8 |
+| Recline forward | SHIFT + numpad 1 | BTN_TRIGGER_HAPPY9 |
+| Recline backward | CTRL + numpad 1 | BTN_TRIGGER_HAPPY10 |
+| Legs up | SHIFT + numpad 2 | BTN_TRIGGER_HAPPY11 |
+| Legs down | CTRL + numpad 2 | BTN_TRIGGER_HAPPY12 |
+| Elevate up | SHIFT + numpad 3 | BTN_TRIGGER_HAPPY13 |
+| Elevate down | CTRL + numpad 3 | BTN_TRIGGER_HAPPY14 |
+| Footplates up | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
+| Footplates down | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |

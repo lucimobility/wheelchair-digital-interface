@@ -74,7 +74,19 @@ These stakeholders do not cover every use case, but they cover the major use cas
 | Left/right blinker toggles* | |
 | Horn* | |
 
-Future Needs:
+### Seating Control
+This is the list of possible parts of the seating system that can be controlled. Not every chair is equipped with every actuator.
+
+The specific actuators that can be adjusted up and down are:
+* Tilt
+* Recline
+* Legs
+* Elevate
+* Footplates
+
+In addition to the specific actuators, chairs may be programmed with a number of set positions that the seating system can be automatically positioned to.
+
+## Future Needs:
 * Override a system behavior
 * Silence sounds
 * Launch setup tool

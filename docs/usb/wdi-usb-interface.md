@@ -38,6 +38,8 @@ https://gitlab.freedesktop.org/libevdev/libevdev/-/blob/master/include/linux/lin
  BTN_THUMBR
 ```
 
+If the usage extends past the typical 15 gamepad buttons, then the buttons start getting mapped to `BTN_TRIGGER_HAPPYX`
+
 ## Drive Actions
 | Action | Keyboard Controls | Gamepad Controls |
 |--------|------|-----|
@@ -64,3 +66,4 @@ Seating controls and user menu control match drive controls.
 | Left blinker | 'b' | user menu only |
 | Right blinker | 'n' | user menu only |
 | Horn | spacebar (while pressed) | BTN_THUMBR (while pressed) |
+

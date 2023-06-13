@@ -1,6 +1,12 @@
 # LUCI Implementation
 LUCI implements the WDI for USB and will be compatible with Bluetooth in the future. Not all WDI functions are currently supported by LUCI.
 
+## Button Mapping
+| Action | Keyboard | Gamepad |
+|-----|---|---|
+| Override | caps lock | BTN_EAST |
+| Silence sounds | None | BTN_NORTH |
+
 ## Limitations and Known Issues
 ### General
 1. LUCI turns off when the wheelchair does, so an input device cannot be used to turn the chair on through LUCI. This also means devices powered through the USB connection to LUCI are off when LUCI is off.

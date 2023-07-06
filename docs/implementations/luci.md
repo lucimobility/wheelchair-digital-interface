@@ -11,7 +11,7 @@ LUCI implements the WDI for USB and will be compatible with Bluetooth in the fut
 |-----|---|---|
 | Override | caps lock | BTN_EAST |
 | Silence sounds | None | BTN_NORTH |
-| Reset changes | Home | BTN_WEST |
+| Reset changes | Home | None |
 
 ## Limitations and Known Issues
 ### General

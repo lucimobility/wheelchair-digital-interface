@@ -51,14 +51,11 @@ Since what needs to be controlled varies depending on the WDI [implementation](.
 **Gamepad:**
 * BTN_EAST
 * BTN_C
-* BTN_WEST
 * BTN_NORTH
 * BTN_Z
 * BTN_TR2
 * BTN_TL2
 * BTN_MODE
-* BTN_THUMBL
-* BTN_THUMBR
 * ABS_Z
 * ABS_RX
 * ABS_RY
@@ -85,13 +82,13 @@ User menu control matches drive controls.
 |--------|------|-----|
 | Power/Sleep toggle | escape | BTN_SELECT to wake up (slept through user menu) |
 | Open/close user menu | 'o' | BTN_SELECT |
-| Adjust maximum speed | 1/2/3/4/5 for direct jump, '-'/'=' for decrement/increment | d-pad left/right(ABS_HAT0X = -1/1) or TL/TR for decrement/increment |
-| Change profile | F1-F8 for direct, '.' for incrementing | d-pad up (ABS_HAT0Y = -1) for increment |
+| Adjust maximum speed | 1/2/3/4/5 for direct jump, '-'/'=' for decrement/increment | TL/TR for decrement/increment |
+| Change profile | comma/period for decrementing/incrementing | d-pad up (ABS_HAT0Y = -1) for increment |
 | Switch mode | tab | d-pad down (ABS_HAT0Y = 1) |
-| Headlight toggle | 'l' | user menu only |
-| Hazard lights | 'h' | user menu only |
-| Left blinker | 'b' | user menu only |
-| Right blinker | 'n' | user menu only |
+| Headlight toggle | 'l' | BTN_THUMBL |
+| Hazard lights | 'h' | BTN_WEST |
+| Left blinker | 'b' | d-pad left(ABS_HAT0X = -1) |
+| Right blinker | 'n' | d-pad right(ABS_HAT0X = 1) |
 | Horn | spacebar (while pressed) | BTN_THUMBR (while pressed) |
 
 ### Seating

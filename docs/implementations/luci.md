@@ -1,11 +1,17 @@
 # LUCI Implementation
 LUCI implements the WDI for USB and will be compatible with Bluetooth in the future. Not all WDI functions are currently supported by LUCI.
 
+## General Notes
+* LUCI collision avoidance and dropoff protection is still active when the chair is controlled via the WDI.
+* LUCI plays a sound when a device becomes the active controller and a different sound when the device is deactivated.
+* Unplugging any device deactivates any active device, returns control to the normal wheelchair electronics, and resets any changes to the wheelchair (such as speed setting) made through the WDI.
+
 ## Button Mapping
 | Action | Keyboard | Gamepad |
 |-----|---|---|
 | Override | caps lock | BTN_EAST |
 | Silence sounds | None | BTN_NORTH |
+| Reset changes | Home | BTN_WEST |
 
 ## Limitations and Known Issues
 ### General
@@ -13,13 +19,15 @@ LUCI implements the WDI for USB and will be compatible with Bluetooth in the fut
 1. Seating position cannot be moved using the input device through LUCI.
 1. User menu cannot be navigated using the input device through LUCI.
 1. Speed setting adjustments made by LUCI are not remembered by the wheelchair electronics. This means that the previously set speed setting will come back if the profile is changed or the the chair is rebooted, and that any changes made to speed setting through the normal joystick interface will change based on what the speed setting was before LUCI changed it (e.g. speed 5 -> LUCI changes to speed 1 -> speed setting decrease through JSM leads to speed 4).
-1. LUCI sound feedback sometimes breaks or sounds weird when using the WDI.
+1. LUCI does not know how many profiles are enabled on the chair and currently assumes there are 4. On chairs with fewer than 4, incrementing to a disabled profile is a no-op on the chair, and incrementing continues to be no-ops until wrapping back around to profile 1. On chairs with more than 4 enabled profiles, there is no way to access the additional profiles via the WDI currently.
 
 ### Chairs with Tracking (ESP)
-This includes most modern Permobil chairs.
-1. Speed setting does not affect maximum speed.
+This includes most modern Permobil chairs. These issues occur only when the chair is being controlled via the WDI.
+1. Programmed RNET settings do not affect drive behavior.
+1. Speed settings 4 and 5 do not affect drive behavior and are functionally equivalent to speed 3.
 1. Profile does not affect drive behavior.
+1. Chair may drive differently through the WDI than with the standard joystick due to tracking interaction with the WDI.
 
 ### Xbox Controllers
 Notes on interfacing with Xbox controllers specifically (including Xbox Adaptive Controller)
-1. Xbox controllers plugged in before the chair/LUCI is turned on will **not** turn on and connect automatically. The controller has to be plugged in after LUCI is powered. This is a known bug and believed to be an issue with the underlying Linux driver (xpad).
+1. Xbox controllers plugged into the LUCILink Hub before the chair/LUCI is turned on will **not** turn on and connect automatically. The controller has to be plugged in after LUCI is powered. This is not an issue if the device is plugged directly into one of the MPU USB ports.

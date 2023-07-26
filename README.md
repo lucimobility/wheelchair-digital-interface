@@ -135,3 +135,4 @@ The companies and organizations listed support the open, inclusive future provid
 | Argallab at Northwestern University | Founding Member |
 | Team Gleason | Founding Member |
 | [LUCI](https://www.luci.com) | Founding Member, LUCI units with LuciCore 2.0 and newer software are compatible with USB WDI controllers. |
+| [LifeDrive](https://www.lifedrivemobility.com/) | Contributing Member |

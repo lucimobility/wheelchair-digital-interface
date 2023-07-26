@@ -50,12 +50,10 @@ Since what needs to be controlled varies depending on the WDI [implementation](.
 
 **Gamepad:**
 * BTN_EAST
-* BTN_C
 * BTN_NORTH
 * BTN_Z
 * BTN_TR2
 * BTN_TL2
-* BTN_MODE
 * ABS_Z
 * ABS_RX
 * ABS_RY
@@ -71,8 +69,10 @@ Since what needs to be controlled varies depending on the WDI [implementation](.
 | Drive backward | 's' \| down arrow | Y axis (towards max val) |
 | Drive left | 'a' \| left arrow | X axis (towards min val) |
 | Drive right | 'd' \| right arrow | X axis (towards max val) |
-| Emergency stop | backspace | BTN_SOUTH |
-| Enable device control | enter | BTN_START |
+| Emergency stop | backspace \| page up \| page down | BTN_SOUTH |
+| Device control toggle | enter | BTN_START |
+| Enable device control | None | BTN_C |
+| Disable device control | None | BTN_MODE |
 
 
 

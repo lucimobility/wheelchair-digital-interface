@@ -4,7 +4,7 @@ LUCI implements the WDI for USB and will be compatible with Bluetooth in the fut
 ## General Notes
 * LUCI collision avoidance and dropoff protection is still active when the chair is controlled via the WDI.
 * LUCI plays a sound when a device becomes the active controller and a different sound when the device is deactivated.
-* Unplugging any device deactivates any active device, returns control to the normal wheelchair electronics, and resets any changes to the wheelchair (such as speed setting) made through the WDI.
+* Unplugging any device deactivates any active device and returns control to the normal wheelchair electronics.
 
 ## Button Mapping
 | Action | Keyboard | Gamepad |
@@ -12,6 +12,7 @@ LUCI implements the WDI for USB and will be compatible with Bluetooth in the fut
 | Override | caps lock | BTN_EAST |
 | Silence sounds | None | BTN_NORTH |
 | Reset changes | Home | None |
+| Profile decrement | matches main spec | ABS_HAT0Y = 1 (temporarily implemented until mode switching is implemented) |
 
 ## Limitations and Known Issues
 ### General

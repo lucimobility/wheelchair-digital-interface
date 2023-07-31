@@ -69,7 +69,7 @@ Since what needs to be controlled varies depending on the WDI [implementation](.
 | Drive backward | 's' \| down arrow | Y axis (towards max val) |
 | Drive left | 'a' \| left arrow | X axis (towards min val) |
 | Drive right | 'd' \| right arrow | X axis (towards max val) |
-| Emergency stop | backspace \| page up \| page down | BTN_SOUTH |
+| Emergency stop | page up \| page down \| 'b' \| 'SHIFT + F5 | BTN_SOUTH |
 | Device control toggle | enter | BTN_START |
 | Enable device control | None | BTN_C |
 | Disable device control | None | BTN_MODE |
@@ -87,8 +87,8 @@ User menu control matches drive controls.
 | Switch mode | tab | d-pad down (ABS_HAT0Y = 1) |
 | Headlight toggle | 'l' | BTN_THUMBL |
 | Hazard lights | 'h' | BTN_WEST |
-| Left blinker | 'b' | d-pad left(ABS_HAT0X = -1) |
-| Right blinker | 'n' | d-pad right(ABS_HAT0X = 1) |
+| Left blinker | '<' \| SHIFT + comma | d-pad left(ABS_HAT0X = -1) |
+| Right blinker | '>' \| SHIFT + period | d-pad right(ABS_HAT0X = 1) |
 | Horn | spacebar (while pressed) | BTN_THUMBR (while pressed) |
 
 ### Seating

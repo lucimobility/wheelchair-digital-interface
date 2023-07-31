@@ -13,6 +13,8 @@ LUCI implements the WDI for USB and will be compatible with Bluetooth in the fut
 | Silence sounds | None | BTN_NORTH |
 | Reset changes | Home | None |
 | Profile decrement | matches main spec | ABS_HAT0Y = 1 (temporarily implemented until mode switching is implemented) |
+| Power/Sleep toggle | None (Escape temporarily mapped to emergency stop until power controls implemented) | None |
+| Switch mode | None (Tab temporarily mapped to emergency stop until mode controls implemented) | None |
 
 ## Limitations and Known Issues
 ### General

@@ -110,5 +110,5 @@ Seating can be controlled using the drive controls when in seating adjust mode. 
 | Elevating legrest down | CTRL + numpad 2 | BTN_TRIGGER_HAPPY12 |
 | Elevate up | SHIFT + numpad 3 | BTN_TRIGGER_HAPPY13 |
 | Elevate down | CTRL + numpad 3 | BTN_TRIGGER_HAPPY14 |
-| Legrest extend | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
-| Legrest retract | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |
+| Legrest retract | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
+| Legrest extend | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |

@@ -92,17 +92,18 @@ User menu control matches drive controls.
 | Horn | spacebar (while pressed) | BTN_THUMBR (while pressed) |
 
 ### Seating
-Seating can be controlled using the drive controls when in seating adjust mode. Alternatively, the following actions are mapped to specific inputs. For now, the gamepad mapping uses buttons outside the range of typical usage, but a mapping such that off-the-shelf gamepads are usable will be created too.
+Seating can be controlled using the drive controls when in seating adjust mode. Alternatively, the following actions are mapped to specific inputs. The seating axis will move as long as the corresponding button is held down and will stop moving when released. For now, the gamepad mapping uses buttons outside the range of typical usage, but a mapping such that off-the-shelf gamepads are usable will be created too.
 
 | Action | Keyboard Controls | Gamepad Controls |
 |--------|------|-----|
-| Memory seating 1 forward | SHIFT + 1 | BTN_TRIGGER_HAPPY1 |
-| Memory seating 1 backward | CTRL + 1 | BTN_TRIGGER_HAPPY2 |
-| Memory seating 2 forward | SHIFT + 2 | BTN_TRIGGER_HAPPY3 |
-| Memory seating 2 backward | CTRL + 2 | BTN_TRIGGER_HAPPY4 |
-| Memory seating 3 forward | SHIFT + 3 | BTN_TRIGGER_HAPPY5 |
-| Memory seating 3 backward | CTRL + 3 | BTN_TRIGGER_HAPPY6 |
-| Tilt forward | SHIFT + numpad 0 | BTN_TRIGGER_HAPP7 |
+| Memory seating 1    | F1 | BTN_TRIGGER_HAPPY1 |
+| Memory seating 2    | F2 | BTN_TRIGGER_HAPPY2 |
+| Memory seating 3    | F3 | BTN_TRIGGER_HAPPY3 |
+| Memory seating 4    | F4 | BTN_TRIGGER_HAPPY4 |
+| Memory seating 5    | F5 | BTN_TRIGGER_HAPPY5 |
+| Memory seating 6    | F6 | BTN_TRIGGER_HAPPY6 |
+| Memory seating Home | F7 | BTN_TRIGGER_HAPPY19 |
+| Tilt forward | SHIFT + numpad 0 | BTN_TRIGGER_HAPPY7 |
 | Tilt backward | CTRL + numpad 0 | BTN_TRIGGER_HAPPY8 |
 | Recline forward | SHIFT + numpad 1 | BTN_TRIGGER_HAPPY9 |
 | Recline backward | CTRL + numpad 1 | BTN_TRIGGER_HAPPY10 |
@@ -112,3 +113,7 @@ Seating can be controlled using the drive controls when in seating adjust mode. 
 | Elevate down | CTRL + numpad 3 | BTN_TRIGGER_HAPPY14 |
 | Legrest retract | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
 | Legrest extend | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |
+| Stand Up | SHIFT + numpad period | BTN_TRIGGER_HAPPY17 |
+| Stand Down | CTRL + numpad period | BTN_TRIGGER_HAPPY18 |
+
+There is currently no mapping for explicity saving a memory seating position. On existing chairs, this is possible to do using joystick movements, and so memory positions can be set using those same commands through the WDI.

@@ -5,7 +5,7 @@ The Wheelchair Digital Interface (WDI) API detailed in this project is a modern,
 The purpose of the open WDI standard is: 
 1. to allow faster development of new accessible wheelchair alternative controls by removing the need for 9-pin printer cable adapter circuits currently required to adapt to today's proprietary TRACE/DB-9 alternative drive inputs, 
 2. to make current, commercially available adaptive gaming and computer interfaces available to power wheelchair users, and, 
-3. to allow two-direction commumication between the power wheelchair and the controller. 
+3. to allow two-direction communication between the power wheelchair and the controller. 
 
 ## Background
 The WDI was initially conceived and developed as part of the National Science Foundation (NSF) Convergence Accelerator Track H project "Mobility Independence through Accelerated Wheelchair Intelligence" (NSF SP0076554) with input from a wide range of stakeholders. 
@@ -83,8 +83,9 @@ The specific actuators that can be adjusted up and down are:
 * Legs
 * Elevate
 * Footplates
+* Stand
 
-In addition to the specific actuators, chairs may be programmed with a number of set positions that the seating system can be automatically positioned to.
+In addition to the specific actuators, chairs may be programmed with a number of set positions (i.e. memory positions) that the seating system can be automatically positioned to.
 
 ## Future Needs:
 * Override a system behavior

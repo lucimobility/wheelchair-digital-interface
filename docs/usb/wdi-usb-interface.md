@@ -107,12 +107,12 @@ Seating can be controlled using the drive controls when in seating adjust mode. 
 | Tilt backward | CTRL + numpad 0 | BTN_TRIGGER_HAPPY8 |
 | Recline forward | SHIFT + numpad 1 | BTN_TRIGGER_HAPPY9 |
 | Recline backward | CTRL + numpad 1 | BTN_TRIGGER_HAPPY10 |
-| Elevating legrest up | SHIFT + numpad 2 | BTN_TRIGGER_HAPPY11 |
-| Elevating legrest down | CTRL + numpad 2 | BTN_TRIGGER_HAPPY12 |
+| Legrest up | SHIFT + numpad 2 | BTN_TRIGGER_HAPPY11 |
+| Legrest down | CTRL + numpad 2 | BTN_TRIGGER_HAPPY12 |
 | Elevate up | SHIFT + numpad 3 | BTN_TRIGGER_HAPPY13 |
 | Elevate down | CTRL + numpad 3 | BTN_TRIGGER_HAPPY14 |
-| Legrest retract | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
-| Legrest extend | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |
+| Footplates up | SHIFT + numpad 4 | BTN_TRIGGER_HAPPY15 |
+| Footplates down | CTRL + numpad 4 | BTN_TRIGGER_HAPPY16 |
 | Stand Up | SHIFT + numpad period | BTN_TRIGGER_HAPPY17 |
 | Stand Down | CTRL + numpad period | BTN_TRIGGER_HAPPY18 |
 
